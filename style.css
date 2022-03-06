@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+
+/* css variables */
+
+:root {
+    --backgroundColor: black;
+    --bodycolor: grey;
+}
+
+.main-container {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: var(--bodycolor);
+    overflow-y: hidden;
+}
+
+
+/* header section */
+
+.header {
+    position: relative;
+    height: 3rem;
+    width: 100%;
+    background-color: var(--backgroundColor);
+}
+
+.header .logo {
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+.header .logo span {
+    color: red;
+}
+
+.header .logo:hover {
+    color: yellow
+}
+
+
+/* search container */
+
+
+/* using flex to centering the divs */
+
+.search-container {
+    position: absolute;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* search label  */
+
+#search-label {
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 800;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-label:hover {
+    color: red;
+}
+
+
+/* input box */
+
+#movieName {
+    font-size: 1.5rem;
+    padding: .2em .5em;
+    width: 20rem;
+    outline: none;
+}
+
+
+/* list */
+
+.search-list {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+
+/* list item inserted via javascript */
+
+.search-list-items {
+    word-wrap: break-word;
+    cursor: pointer;
+    width: 20rem;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    background-color: rgb(246, 146, 146);
+    padding: 0 .4em;
+}
+
+.search-list-items:hover {
+    color: white;
+    background-color: rgb(233, 81, 81);
+}
+
+
+/* result new */
+
+.results {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+
+/* poster img will be injected via javaScript */
+
+.poster {
+    transition: all 0.3s ease-in-out;
+    width: 400px;
+}
+
+.poster img {
+    height: 420px;
+    width: 400px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    padding: 1em;
+    height: 420px;
+    width: 500px;
+}
+
+.info p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#title {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+
+/* common classes */
+
+.hide {
+    display: none;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.border {
+    background-color: 2px solid red;
+}
+
+
+/* media for medium and small devices */
+
+@media(max-width:672px) {
+    html {
+        font-size: 70%;
+    }
+    .results {
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-container {
+        left: 30%;
+    }
+    .poster {
+        height: 300px;
+        width: 300px;
+    }
+    .poster img {
+        height: 300px;
+        width: 295px;
+    }
+    .info {
+        height: 300px;
+        width: 400px
+    }
+}

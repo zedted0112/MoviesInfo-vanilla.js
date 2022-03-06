@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>movies info</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="main-container">
+        <!-- header for logo and other stuffs -->
+        <div class="header">
+            <div class="logo">
+                <h1>Movies <span>Info</span></h1>
+            </div>
+        </div>
+        <!-- search div starts -->
+        <div class="search-container  ">
+            <h3 id="search-label">Search movie</h3>
+            <!-- search box -->
+            <div class="search-box">
+                <!-- onkeyup event added to get input text as the user types  -->
+                <input type="text" id="movieName" onkeyup="findMovies()">
+            </div>
+            <!-- list div will get the search results -->
+            <div id="List" onclick="emptyPoster()" class="search-list hide ">
+
+
+            </div>
+        </div>
+
+        <!-- result div contains poster and information about the movie -->
+        <div class="results">
+
+            <div class="poster" id="poster">
+                <!--       the data will be inserted via the javascript -->
+            </div>
+            <div id="info" class="info">
+                <!--       the data will be inserted via the javascript -->
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
